@@ -5,7 +5,16 @@
     <title>Le blog de Joe</title>
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <div>
+        <h1><a href="/">Le blog de joe</a></h1>
+    </div>
+    {% for post in posts %}
+        <div>
+            <p>publié le {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+
+    {% endfor %}
 </body>
 </html>
